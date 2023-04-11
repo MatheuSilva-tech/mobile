@@ -8,20 +8,19 @@ export default function LoginScreen() {
 
   return (
     <>
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: '#5F9EA0'}}>
       <View style={styles.container}>
-        <Text style={{fontSize: '40px', color: 'red'}}> Bem Vindo</Text>
-        <Text style={{fontSize: '30px'}}> Tela de Login </Text>
+        <Text style={{fontSize: '40px', color: 'white'}}> Bem Vindo</Text>
+        <Text style={{fontSize: '30px', color: 'white'}}> Tela de Login </Text>
       </View>
 
       <View style={styles.viewLogin}>
-        <Text style={{fontSize: '30px', fontWeight: 'bold', marginBottom: '20px'}}> Login </Text>
+        <Text style={{fontSize: '30px', fontWeight: 'bold', marginBottom: '20px', color: 'white'}}> Login </Text>
         <TextInput style={styles.input} placeholder='Digite o Login'/>
         <TextInput style={styles.input} placeholder='Digite a Senha'/>
-        <TouchableOpacity style={styles.botao}> Login </TouchableOpacity>
 
         <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
-            <Text style={styles.home}> Ir para Home </Text>
+            <Text style={styles.botao}> login </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -34,15 +33,13 @@ const styles = StyleSheet.create({
     flex: 0.2,
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: 'blue'
   },
   botao: {
-    border: '2px solid black',
-    backgroundColor: '#00f',
-    padding: '10px',
+    backgroundColor: '#088F8F',
+    paddingHorizontal: 120,
+    paddingVertical: 10,
     color: 'white',
     fontWeight: 'bold',
-    width: '30%',
     textAlign: 'center',
     marginTop: '20px'
   },
@@ -55,13 +52,12 @@ const styles = StyleSheet.create({
   viewLogin: {
     flex: 0.9,
     alignItems: 'center',
-    marginTop: '40px'
+    marginTop: '40px',
   },
   home: {
     border: '2px solid black',
     padding: '10px',
     marginTop: '20px',
-    backgroundColor: '#8e8e8e',
     color: 'white'
   }
 });

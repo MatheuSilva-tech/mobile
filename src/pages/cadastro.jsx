@@ -9,10 +9,7 @@ export default function Cadastro() {
     const [atv, setAtv] = useState()
     const [atividade, setAtividade] = useState([
         {
-            atividade: "Estudar"
-        },
-        {
-            atividade: "ler um livro"
+            atividade: "ler um e-book"
         }
     ]);
 
@@ -29,11 +26,13 @@ export default function Cadastro() {
             <TouchableOpacity onPress={() => navigation.navigate("Home")} />
             <Text> Cadastrar Atividades</Text>
             <TextInput style={styles.texto} onChangeText={(value) => setAtv(value)} />
-            <TouchableOpacity onPress={() => inserir()} ><Text>Click-me</Text></TouchableOpacity>
+
+            <TouchableOpacity onPress={() => inserir()} ><Text style={styles.clickme}>Click-me</Text></TouchableOpacity>
 
             {
                 atividade.map((atv => (
-                    <Text>{atv.atividade}</Text>
+                    <Text style={styles.item}>{atv.atividade}</Text>
+                    
                 )
                 ))
             }
@@ -43,9 +42,20 @@ export default function Cadastro() {
 
 const styles = StyleSheet.create({
     texto: {
-        border: '2px solid blue',
-        padding: '10px',
-        margin: '10px',
-        width: '70vw'
+        padding: 10,
+        margin: 10,
+        borderBottomWidth: 2
+    },
+    clickme: {
+        backgroundColor: '#088F8F',
+        maxWidth: '20%',
+        marginLeft: 10,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        marginBottom: 30
+    },
+    item: {
+        marginLeft: 10
     }
+
 })
