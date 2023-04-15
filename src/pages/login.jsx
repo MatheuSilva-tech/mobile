@@ -19,7 +19,7 @@ export default function LoginScreen() {
         <TextInput style={styles.input} placeholder='Digite o Login'/>
         <TextInput style={styles.input} placeholder='Digite a Senha'/>
 
-        <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
+        <TouchableOpacity onPress={()=>navigation.navigate("HomeMain")}>
             <Text style={styles.botao}> login </Text>
         </TouchableOpacity>
       </View>
